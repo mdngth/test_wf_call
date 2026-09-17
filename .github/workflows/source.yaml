@@ -1,0 +1,11 @@
+name: call workflow
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  call-reusable:
+    uses: ./.github/workflows/call.yaml
+    with:
+      username: "mdngth"
