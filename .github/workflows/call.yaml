@@ -1,0 +1,16 @@
+name: Reusable build
+
+on:
+  workflow_call:
+    inputs:
+      username:
+        required: true
+        type: string
+        description: 'username'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print username
+        run: echo "Hello, ${{ inputs.username }}!"
